@@ -2,14 +2,22 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-// Require the necessary discord.js classes
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+// Require the necessary discord classes
+const { Client, Collection } = require('discord.js');
+const { Player } = require("discord-player");
+const { registerPlayerEvents } = require('./events/registerPlayerEvents');
 const { token } = require('./config.json');
 
-
-
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ 
+	intents: [
+		"Guilds", 
+		"GuildVoiceStates"]
+	});
+
+// Create a new player for playing music
+client.player = new Player(client);
+registerPlayerEvents(client.player);
 
 //Loading the commands in
 client.commands = new Collection();
@@ -42,6 +50,10 @@ for (const file of eventFiles) {
 	} else {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
+}
+
+module.exports = {
+	client
 }
 
 // Log in to Discord with your client's token
