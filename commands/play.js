@@ -18,7 +18,9 @@ module.exports = {
 
         const query = interaction.options.getString("query");
 
-        const queue = await client.player.createQueue(interaction.guild, {
+        const currentqueue = await client.player.getQueue(interaction.guild);
+
+        const queue = currentqueue ? currentqueue : await client.player.createQueue(interaction.guild, {
             ytdlOptions: {
                 filter: 'audioonly',
                 highWaterMark: 1 << 30,
@@ -40,8 +42,12 @@ module.exports = {
         }).then(x => x.tracks[0]);
         if (!track) return await interaction.followUp({ content: `❌ | Track **${query}** not found!` });
 
-        queue.play(track);
-
+        if (currentqueue) {
+            queue.insert(track);
+        } else {
+            queue.play(track);
+        }
         return await interaction.followUp({ content: `⏱️ | Loading track **${track.title}**!` });
+
     }
 }
