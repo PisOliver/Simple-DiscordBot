@@ -9,7 +9,7 @@ module.exports = {
                 .setDescription('The name of the song you want to play')
                 .setRequired(true)),
     async execute(interaction) {
-        const { client } = require('../main.js');
+        const { client } = require('../../main.js');
 
         //Returning not in a voice channel error
         if (!interaction.member.voice.channelId) return await interaction.reply({ content: "You are not in a voice channel!", ephemeral: true });

@@ -8,13 +8,15 @@ module.exports = {
 
     async execute(interaction) {
 
-        const {client} = require('../main');
+        const {client} = require('../../main');
         
         await interaction.deferReply();
         
         const queue = client.player.getQueue(interaction.guild);
-        if (!queue || !queue.playing) return void ctx.sendFollowUp({ content: '❌ | No music is being played!' });
 
-        return await interaction.followUp({ content: `🎶 | Now playing **${queue.current.title}**`});
+        //Return error if a queue does not exist
+        if (!queue || !queue.playing) return void interaction.FollowUp({ content: '❌ | No music is being played!' });
+
+        return void interaction.followUp({ content: `🎶 | Now playing **${queue.current.title}**`});
     }
 }

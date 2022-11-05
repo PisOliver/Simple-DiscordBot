@@ -3,12 +3,19 @@ const { clientId, guildId, token } = require('./config.json');
 const fs = require('node:fs');
 
 const commands = [];
-// Grab all the command files from the commands directory
+// Grab all command files from the commands directory
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+const musicCommandFiles = fs.readdirSync('./commands/music').filter(file => file.endsWith('.js'));
 
 // Grab the SlashCommandBuilder#toJSON() output of each command's data for deployment
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
+	commands.push(command.data.toJSON());
+}
+
+for (const file of musicCommandFiles) {
+	const command = require(`./commands/music/${file}`);
 	commands.push(command.data.toJSON());
 }
 
