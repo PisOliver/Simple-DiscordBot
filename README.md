@@ -13,3 +13,17 @@ A simple Discord bot using the discord.js library
 | /nowplaying | Returns the currently played song   |                       |
 | /play       | Plays a song                        | \<songName>           |
 | /ping       | Returns pong! (For testing the bot) |                       |
+
+## Used Libraries
+
+- [discordjs](https://github.com/discordjs/discord.js) Discord JavaScript API
+- [Androz2091/discord-player](https://github.com/Androz2091/discord-player) Music features library
+- [FFmpeg](https://ffmpeg.org) for stream encoding
+
+## Installation
+
+### Docker
+
+- Copy the **config_template.json** file as **config.json**, and fill it with the correct data
+- Build the docker container using: `docker build . -t simple-discordbot`
+- Start the docker container using: `docker run -d simple-discordbot`
