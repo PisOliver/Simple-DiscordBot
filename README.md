@@ -7,12 +7,14 @@ A simple Discord bot using the discord.js library
 
 ### Commands
 
-| Command     | Description                         | Options               |
-| :---        |    :----:                           |          ---:         |
-| /echo       | Returns the text you entered        | \<text>               |
-| /nowplaying | Returns the currently played song   |                       |
-| /play       | Plays a song                        | \<songName>           |
-| /ping       | Returns pong! (For testing the bot) |                       |
+| Command     | Description                              | Options               |
+| :---        |    :----:                                |          ---:         |
+| /echo       | Returns the text you entered             | \<text>               |
+| /nowplaying | Returns the currently played song        |                       |
+| /pause      | Pauses the playback                      |                       |
+| /ping       | Returns pong! (For testing the bot)      |                       |
+| /play       | Plays a song                             | \<songName>           |
+| /stop       | Stops the playback, and clears the queue |                       |
 
 ## Used Libraries
 
