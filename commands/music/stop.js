@@ -5,7 +5,7 @@ module.exports = {
         .setName('stop')
         .setDescription('Stops the playback.'),
     async execute(interaction) {
-        const {client} = require('../main');
+        const {client} = require('../../main');
 
         const queue = client.player.getQueue(interaction.guild);
 
