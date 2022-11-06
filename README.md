@@ -14,12 +14,15 @@ A simple Discord bot using the discord.js library
 | /pause      | Pauses the playback                      |                       |
 | /ping       | Returns pong! (For testing the bot)      |                       |
 | /play       | Plays a song                             | \<songName>           |
+| /repeat     | Sets the repeat mode                     | \<repeatMode>         |
 | /stop       | Stops the playback, and clears the queue |                       |
 
 ## Used Libraries
 
 - [discordjs](https://github.com/discordjs/discord.js) Discord JavaScript API
 - [Androz2091/discord-player](https://github.com/Androz2091/discord-player) Music features library
+- [@discordjs/opus](https://github.com/discordjs/opus) for Opus support
+- [eugeneware/ffmpeg-static](https://github.com/eugeneware/ffmpeg-static) for node FFmpeg libraries
 - [FFmpeg](https://ffmpeg.org) for stream encoding
 
 ## Installation
