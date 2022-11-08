@@ -14,6 +14,7 @@ A simple Discord bot using the discord.js library
 | /pause      | Pauses the playback                      |                       |
 | /ping       | Returns pong! (For testing the bot)      |                       |
 | /play       | Plays a song                             | \<songName>           |
+| /queue      | Lists the queue                          |                       |
 | /repeat     | Sets the repeat mode                     | \<repeatMode>         |
 | /stop       | Stops the playback, and clears the queue |                       |
 
