@@ -9,7 +9,7 @@ A simple Discord bot using the discord.js library
 
 | Command     | Description                              | Options               |
 | :---        |    :----:                                |          ---:         |
-| /echo       | Returns the text you entered             | \<text>               |
+| /back       | Plays the previous song                  |                       |
 | /nowplaying | Returns the currently played song        |                       |
 | /pause      | Pauses the playback                      |                       |
 | /ping       | Returns pong! (For testing the bot)      |                       |
