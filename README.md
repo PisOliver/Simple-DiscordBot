@@ -16,6 +16,7 @@ A simple Discord bot using the discord.js library
 | /play       | Plays a song                             | \<songName>           |
 | /queue      | Lists the queue                          |                       |
 | /repeat     | Sets the repeat mode                     | \<repeatMode>         |
+| /skip       | Skips one or more songs                  | \<numberOfTracks>     |
 | /stop       | Stops the playback, and clears the queue |                       |
 
 ## Used Libraries
