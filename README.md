@@ -10,6 +10,7 @@ A simple Discord bot using the discord.js library
 | Command     | Description                              | Options               |
 | :---        |    :----:                                |          ---:         |
 | /back       | Plays the previous song                  |                       |
+| /clear      | Clears the queue                         |                       |
 | /nowplaying | Returns the currently played song        |                       |
 | /pause      | Pauses the playback                      |                       |
 | /ping       | Returns pong! (For testing the bot)      |                       |
