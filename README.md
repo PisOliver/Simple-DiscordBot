@@ -31,6 +31,15 @@ A simple Discord bot using the discord.js library
 
 ## Installation
 
+### Manual Install
+
+- Install [FFmpeg](https://ffmpeg.org)
+- Clone this repository: `git clone https://github.com/PisOliver/Simple-Discordbot`
+- Install dependencies using: `npm install`
+- Copy the **config_template.json** file as **config.json**, and fill it with the correct data
+- Deploy the commands using `node deploy-commands.js`
+- Start the bot using `node main.js`
+
 ### Docker
 
 - Copy the **config_template.json** file as **config.json**, and fill it with the correct data
